@@ -5,22 +5,15 @@
  * Purpose: Declaration of the class Procesos
  ***********************************************************************/
 
-#if !defined(__Class_Diagram_2_Procesos_h)
-#define __Class_Diagram_2_Procesos_h
+#pragma once
 
-class Procesos
-{
+class Procesos {
 public:
-   virtual int EliminarCola(int valor)=0;
-   virtual int InsertarCola(int valor)=0;
-   virtual int Buscar(int valor)=0;
-   virtual int Imprimir(int valor)=0;
-   virtual int InsertarCabeza(int valor)=0;
-   virtual int EliminarCabeza(int valor)=0;
-
-protected:
-private:
-
+    virtual int EliminarCola(int valor) = 0;
+    virtual int InsertarCola(int valor) = 0;
+    virtual int Buscar(int valor) = 0;
+    virtual int Imprimir(int dummy) = 0;  // dummy por compatibilidad
+    virtual int InsertarCabeza(int valor) = 0;
+    virtual int EliminarCabeza(int valor) = 0;
+    virtual ~Procesos() {}
 };
-
-#endif
